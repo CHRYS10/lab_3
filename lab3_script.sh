@@ -8,5 +8,11 @@
 echo "Enter a filename: "
 read fileName
 echo "Enter a regular expression: "
-read regExp
-grep -c $regExp 
+read x
+echo "Enter a reguler expression: "
+read y
+var=`grep -c $x $fileName`
+echo "number of emails in file: " $var
+var=`grep -c $y $fileName`
+echo "number of phone #'s with 303 area code: " $var
+grep -E "@geocities" $fileName  >> "email_results.txt"
